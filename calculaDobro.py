@@ -24,4 +24,4 @@ def imprimir(result):
 
 entrada = entradaDados()
 processo = calculaDobro(entrada)
-saida = imprimir(processo)
+imprimir(processo)
