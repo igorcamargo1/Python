@@ -13,8 +13,8 @@ def entradaDados():
     n = int(input("Digite o número que você deseja dobrar:"))
     return n
 #===============================================
-def calculaDobro(n):
-    dobro = n*2
+def calculaDobro(n1):
+    dobro = n1*2
     return dobro
 #===============================================
 def imprimir(result):
