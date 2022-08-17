@@ -16,7 +16,7 @@ def tamanho_lista():
     return t
 #--------------------------------------------------
 def criar_lista(t):
-    lista = []
+    lista = list(range(t))
     print('-- Criando lista... --')
     print("----------------------")
     i = 0
