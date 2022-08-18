@@ -26,6 +26,20 @@ def criar_lista(t):
         lista[i] = int(input('Número:'))
         i += 1
     return lista
+'''
+def criar_lista(t):
+    print("=============================================")
+    print("")
+    print('-- Criando lista... --')
+    print("----------------------")
+    lista = []
+    i = 0
+    while i < t:
+        n = int(input('Número:'))
+        lista.append(n)
+        i += 1
+    return lista
+'''
 #--------------------------------------------------
 def imprimir_lista(lista):
     print("=============================================")
@@ -33,7 +47,6 @@ def imprimir_lista(lista):
     print('-- Imprimindo os elementos da lista: --')
     for i in lista:
         print(f'Elemento: {i}')
-    return i 
 #--------------------------------------------------
 def imprimir_pares(lista):
     print("=============================================")
@@ -48,31 +61,27 @@ def imprimir_impares(lista):
     for i in lista:
         if i % 2 == 1:
             print(f"Elementos impares: {i}")
-    return i
 #--------------------------------------------------
-def add_impares(lista):
+def lista_impares(lista):
     print("=============================================")
     print("")
-    impar = int(input("Qual número você quer adicionar?"))
-    if impar % 2 == 1:
-        lista.append(impar)
-        print("elemento adicionado a lista com sucesso!")
-        print(f"lista: {lista}")
-    else:
-        print("Elemento não é impar, não foi adiconado a lista.")
-    return impar
+    lista_impar = []
+    for i in lista:
+        if i % 2 ==0 :
+            lista_impar.append(i)
+            i+=1
+    return lista_impar
+        
 #--------------------------------------------------
-def add_pares(lista):
+def lista_pares(lista):
     print("=============================================")
     print("")
-    par = int(input("Qual número você quer adicionar?"))
-    if par % 2 == 0:
-        lista.append(par)
-        print("elemento adicionado a lista com sucesso!")
-        print(f"lista: {lista}")
-    else:
-        print("Elemento não é par, não foi adiconado a lista.")
-    return par
+    lista_par = []
+    for i in lista:
+        if i % 2 ==0 :
+            lista_par.append(i)
+            i+=1
+    return lista_par
 #--------------------------------------------------
 def busca_elemento(lista):
     print("=============================================")
@@ -90,11 +99,10 @@ def principal():
         criar = criar_lista(tamanho)
         imprimir_pares(criar)
         imprimir_impares(criar)
-        add_pares(criar)
-        add_impares(criar)
+        lista_pares(criar)
+        lista_impares(criar)
         busca_elemento(criar)
         stop = int(input("Caso queira encerrar o programa, digite 0, se quer continuar, digite 1:  "))
 #--------------------------------------------------
 
 principal()
-
